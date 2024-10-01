@@ -1,0 +1,916 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", "sans-serif";
+    
+}
+
+body{
+    color: #f9f6f6;
+    background-color:rgb(11, 11, 45);
+
+}
+
+.header{
+    position: fixed;
+    background-color: #051129;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 30px ;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 000;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: -3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.navbar a:hover{
+    color: aqua;
+}
+
+.home-img img{
+    width: 200px;
+    height: 200px ;
+    border-radius: 50%;
+    border:5px solid #0ef;
+    box-shadow: 0  0 50px rgba(0 , 255 , 204 , 0.7);
+    margin-bottom: 20px;
+    
+}
+
+.home{
+    
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+     background-color:rgb(11, 11, 45);
+    background-size: cover;
+    background-position: center;
+    display: flex ;
+    align-items: center;
+    padding: 20px 10% 0;
+    
+}
+
+.home-content{
+  max-width: 600;
+  margin-top: 100px;
+  
+  
+
+}
+
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+
+}
+
+.home-content h3:nth-of-type(2){
+    animation:slideTop 1s ease forwards;
+    animation-delay:  .7s;
+}
+
+
+.home-content h3 span{
+     color: #0ef;
+}
+
+.home-content h1{
+    font-size: 40px;
+    font-weight: 700;
+    margin:-3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+    color: #0ef;
+
+}
+
+.home-content p{
+    font-size: 20px;
+    opacity:0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay:1s;
+
+}
+
+
+
+.home-sc1 a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: o;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 20px 15px 30px 0;
+}
+
+.home-sc1 a:hover{
+    background: #0ef;
+    color: black;
+    box-shadow: 0 0 20px #0ef ;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 20pxpx;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: bold;
+    
+   
+}
+
+.btn-box:hover{
+    box-shadow:0 0 5px cyan ,
+    0 0 25px cyan , 0 0 50px cyan,
+    0 0 100px cyan , 0 0  200px cyan
+
+}
+
+.about{
+    background-color:rgb(11, 11, 45);
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 50px;
+
+
+}
+.about-text{
+    margin-top: 90px;
+}
+.about .btn-box{
+    margin-top: 10px;
+}
+
+.about-img img{
+    margin-top: 175px;
+    margin-bottom: 30px;
+    height: 200px;
+    width: 200px;
+    border: 5px solid #0ef;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(0 , 255, 204 , 0.9);
+    
+}
+
+.about-text h2{
+    font-size:60px ;
+
+}
+.about-text span{
+    color: #0ef;
+}
+
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    
+}
+
+.about-text p{
+    color: aliceblue;
+   
+   
+}
+
+.containerwork h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #f7f0f0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.containerwork {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Common styling for Education and Experience Sections */
+
+
+/* Education and Experience Items */
+.education-item, .experience-item {
+    padding: 20px;
+    border: 1px solid #0ca2ed;
+    border-radius: 10px;
+    background-color: #151c3e;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Slide-in animation for individual items */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.education-item h3, .experience-item h3 {
+    font-size: 24px;
+    color: #fcfbfb;
+    margin-bottom: 10px;
+}
+
+.education-item p, .experience-item p {
+    font-size: 16px;
+    color: #f6f1f1;
+    line-height: 1.5;
+}
+
+/* Hover effect for items */
+.education-item:hover, .experience-item:hover {
+    background-color: #20bee2;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.main-text{
+    text-align: center;
+}
+
+.sub-title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+}
+.sub-title span{
+    color: #0ef;
+}
+
+ section {
+    display: flex;
+}
+.container1 {
+   max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+
+}
+
+.heading1 {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    color: #f4f4f4;
+    margin-bottom: 50px;
+    text-decoration: underline;
+    text-decoration-thickness:5px ;
+
+}
+
+/* Technical Bars */
+.Technical-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 50px;
+    
+}
+
+.bar {
+    flex:1 1 200px;
+    margin-bottom: 20px ;
+    text-align: left;
+    font-size: 23px;
+}
+
+.bar i {
+    font-size: 23px;
+    margin-bottom: 0;
+    
+}
+
+.info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    
+}
+
+/* Progress Bar Styling */
+ .progress-line {
+    background: #110f26;
+    height: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes animation{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+
+.progress-line span {
+    display: block;
+    height: 100%;
+    background: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animation 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 80%;
+}
+
+.progress-line.typescript span{
+    width: 70%;
+}
+
+.progress-line.nextjs span{
+    width: 50%;
+}
+
+.progress-line.react span{
+    width: 40%;
+}
+
+
+
+.radial-bar {
+    position: relative;
+    width: 100px;
+    height: 120px;
+    margin: 10px 0;
+    margin-left: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: -10px;
+
+}
+
+.radial-bar svg {
+    transform: translate(-50% , -50%) rotate(-90deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+
+}
+
+.radial-bar .progress-bar {
+    stop-color: #0c2530;
+    stroke-width: 10px;
+    fill: transparent;
+    animation: animate-bar 1s linear forwards;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dasharray: -1;
+    }
+}
+
+.radial-bar .path {
+    stroke-width: 10px;
+    fill: transparent;
+    stroke: #0ef;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    
+}
+.path-1{animation: animate-path1 1s 1s linear forwards;}
+.path-2{animation: animate-path2 1s 1s linear forwards;}
+.path-3{animation: animate-path3 1s 1s linear forwards;}
+.path-4{animation: animate-path4 1s 1s linear forwards;}
+
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;;
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 175;;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 125;;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 75;;
+    }
+}
+
+
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.radial-bar .text {
+    text-align: center;
+    margin: 10px ;
+    position: absolute;
+    top: 90%;
+    
+}
+
+/* Animations */
+ @keyframes progressAnimation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes circleAnimation {
+    0% {
+        stroke-dashoffset: 502;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+
+} 
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  
+   
+}
+
+.heading2 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+    color: #f3f3f3;
+    margin-bottom: 50px;
+}
+span{
+    color:#0ef;
+}
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px; /* Gap between cards */
+}
+
+.card {
+    background: #151c3e;
+    border-radius: 20px;
+    box-shadow: 0  0 15px rgba(0 , 255 , 204 , 0.7);
+    overflow: hidden;
+    width: calc(25% - -20px); /* Equal width for all cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(27, 186, 221, 0.2);
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures image scales and covers without distortion */
+    border-bottom: 3px solid #f3f3f3;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #f6f9fa;
+    font-weight: bold;
+    
+
+}
+
+.contact{
+    margin-top: 50px;
+}
+
+.contact-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:rgb(19, 24, 66);
+    box-shadow:  0  0 25px rgba(0 , 255 , 204 , 0.7);;
+    
+    
+}
+
+/* Style for the form title */
+.contact-form h2 {
+    text-align: center;
+    color: #fbf8f8;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-form h2 span {
+    color: #0ef;
+}
+
+/* Style for the form inputs */
+.contact-form input[type="text"],
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0b0722;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Adding transition */
+    outline: none; /* Remove default outline */
+    background-color: #0d0828;
+    color: #111111; /* Text color */
+}
+
+/* Focus effect for inputs and textarea (no box-shadow) */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #09223d; /* Change only the border color */
+    background-color: #0a0e38; /* Optional: Slight background change */
+    color: #000;
+
+}
+
+/* Submit button styling */
+.contact-form .send {
+    width: 30%;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(19, 42, 108);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin-left: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adding transition */
+}
+
+/* Hover effect for the submit button */
+.contact-form .send:hover {
+    background-color: #0056b3;
+}
+
+.last-text{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #f6f9fa;
+    font-weight: bold;
+
+
+}
+
+.last-text h1{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+footer .last-text a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    transition: .5s ease;
+    opacity: o;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 20px 15px 30px 0;
+}
+.last-text a:hover{
+    background: #0ef;
+    color: black;
+    box-shadow: 0 0 20px #0ef ;
+}
+footer{
+    text-align: center;
+    color: #0ef;
+}
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+}
+}
+
+
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+}
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100);
+        opacity: 0;
+    }
+    100%{
+      transform: translateY(0px);
+      opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+}
+}
+
+#checkbtn {
+    float: right;
+    margin-left: 20px;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Hide the checkbox by default */
+#check {
+    display: none;
+}
+
+/* Navbar styling for mobile screens */
+@media (max-width: 768px) {
+
+    /* Show check button */
+    #checkbtn {
+        display: block;
+    }
+
+    /* When check button is clicked */
+    #check:checked ~ ul {
+        left: 0;
+    }
+ 
+  
+
+    /* Navbar styling */
+    .navbar ul {
+        width: 100%;
+        background-color:rgb(11, 11, 45) ;
+        
+        position: fixed;
+        top: 80px; /* Directly below the check button */
+        left: 100%; /* Hidden initially */
+        transition: left 0.5s ease; /* Smooth transition */
+        
+    }
+
+    /* Styling for links in the navbar */
+    .navbar a {
+        display: block;
+        text-align: right;
+        line-height: 10px;
+        margin-right: 20px;
+        color: #fff; /* Link color */
+        text-decoration: none;
+    
+        padding: 10px 0;
+    }
+
+    /* Optional: Hover effect for links */
+    .navbar a:hover {
+        background-color: #25bce6; /* Hover background color */
+        color: #ddd; /* Hover text color */
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .home{
+        display: block;;
+    }
+   
+.last-text {
+        font-size: 0.9rem;
+    }
+
+   
+
+    .about-img img {
+        height: 180px;
+        width: 180px;
+        
+
+    
+    }
+
+    
+}
+
+@media (max-width: 992px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .project-cards {
+        gap: 30px;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+   
+
+    .home-content h1,
+    .home-content p,
+    .last-text {
+        font-size: 1rem; 
+    }
+    .card {
+        width: calc(100% - 20px); 
+    }
+    
+
+    .about{
+        flex-direction: column;
+        gap: 5px;
+        padding: 20px;
+    }
+
+    .about-img img {
+        height: 150px;
+        width: 150px;
+        margin-block-end: -30px;
+    }
+    .container1 .heading1{
+        font-size: 1rem;
+     }
+    .container1  .radial-bar{
+     margin-left: 10px;
+    }
+ 
+    .home-sc1 {
+ 
+     display: flex;
+    
+       }
+
+       .containerwork{
+        padding: 20px;
+       }
+       .education-item , .experience-item{
+        padding: 10px;
+        font-size: 14px;
+
+       }
+       .container2 .heading2{
+        font-size: 40px;
+        
+       }
+}
+
+
+@media (max-width: 576px) {
+   
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    
+
+    .home-content {
+        padding: 0 5%;
+    }
+
+    .home-content h1 {
+        font-size: 1.5rem; 
+    }
+
+    .home-img img {
+        width: 150px; 
+        height: 150px;
+        margin-top: 50px;
+    }
+
+    .contact-form {
+        width: 90%; 
+    }
+}
+
